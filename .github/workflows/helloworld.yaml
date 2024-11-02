@@ -2,26 +2,26 @@ name: hello-world
 
 on:
   push:
-    branch:
+    branches:
       - main
   pull_request:
-    branch:
+    branches:
       - main
   workflow_dispatch:
 
-
 jobs:
   hello:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-      - run: echo "lumanex fisrt pipeline yaml"
-      - shell: bash
+        run: echo "lumanex first pipeline yaml"
+        shell: bash
 
   goodbye:
-    run-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - name: goodbye world
-      - run: echo "good bye from lumanex"
-      - shell: bash
+        run: echo "goodbye from lumanex"
+        shell: bash
+
